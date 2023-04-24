@@ -5,6 +5,7 @@ import FormCliente from './views/cliente/FormCliente';
 
 import Home from './views/home/Home';
 import FormProduto from './views/produto/FormProduto';
+import FormEntregador from './views/entregador/FormEntregador';
 
 function Rotas() {
     return (
@@ -13,7 +14,7 @@ function Rotas() {
                 <Route path="/" element={ <Home/> } />
                 <Route path="form-cliente" element={ <FormCliente/> } />
                 <Route path="form-produto" element={ <FormProduto/> } />
-                
+                <Route path="form-entregador" element={ <FormEntregador/> } />
             </Routes>
         </>
     )
