@@ -148,11 +148,10 @@ class FormEntregador extends React.Component{
                                     <Form.Input
 										fluid
 										label='Qntd entregas realizadas'
-                                        width={4}>
-										<InputMask 
-										mask="" 
+                                        width={4}
+										
 										value={this.state.qtdEntregasRealizadas}
-										onChange={e => this.setState({qtdEntregasRealizadas: e.target.value})}/> 
+										onChange={e => this.setState({qtdEntregasRealizadas: e.target.value})}> 
 									</Form.Input>
 
                                     <Form.Input
