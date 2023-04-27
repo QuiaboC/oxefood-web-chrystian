@@ -1,6 +1,8 @@
 import axios from "axios";
 import React from "react";
 import { Button, Container, Divider, Form, Icon } from 'semantic-ui-react';
+import { Link } from "react-router-dom";
+import InputMask from 'react-input-mask';
 
 
 class FormProduto extends React.Component{
@@ -91,9 +93,11 @@ class FormProduto extends React.Component{
 										fluid
                                         required
 										label='Valor unitário'
-                                        width={6}
+                                        width={6}>
+										<InputMask 
+										mask="99.99" 
 										value={this.state.ValorUnitário}
-			                            onChange={e => this.setState({ValorUnitário: e.target.value})}>
+			                            onChange={e => this.setState({ValorUnitário: e.target.value})}/>
 								
 									</Form.Input>
 
@@ -101,9 +105,11 @@ class FormProduto extends React.Component{
 										fluid
 										label='Tempo de entrega Mínimo em Minutos'
                                         placeholder="30"
-                                        width={6}
+                                        width={6}>
+										<InputMask 
+										mask="99.99"
 										value={this.state.MínimoEmMinutos}
-			                            onChange={e => this.setState({MínimoEmMinutos: e.target.value})}>
+			                            onChange={e => this.setState({MínimoEmMinutos: e.target.value})}/>
 										
                                             
                                     
@@ -113,10 +119,12 @@ class FormProduto extends React.Component{
                                         fluid
                                         label='Tempo de entrega Máximo em Minutos'
                                         placeholder="40"
-                                        width={6}
+                                        width={6}>
+										<InputMask 
+										mask="99.99"
 										value={this.state.MáximoEmMinutos}
 			                            onChange={e => this.setState({MáximoEmMinutos: e.target.value})}
-                                    >
+                                    />
                                      
                                             
                                      
@@ -136,7 +144,8 @@ class FormProduto extends React.Component{
 										onClick={this.listar}
 										>
 										<Icon name='reply' />
-										Voltar
+										<Link to={'/list-produto'}>Voltar</Link>
+
 									</Button>
 
 									<Container textAlign='right'>
