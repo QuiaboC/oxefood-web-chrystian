@@ -30,10 +30,9 @@ class ListEntregador extends React.Component{
 
 formatarData = (dataParam) => {
 
-    if (dataParam == null || dataParam == '') {
+    if (dataParam === null || dataParam === '') {
         return ''
     }
-    
     let dia = dataParam.substr(8,2);
     let mes = dataParam.substr(5,2);
     let ano = dataParam.substr(0,4);
@@ -88,7 +87,7 @@ render(){
                                   <Table.HeaderCell>Endereco Uf</Table.HeaderCell>
                                   <Table.HeaderCell>Endereco Complemento</Table.HeaderCell>
                                   <Table.HeaderCell>Ativo</Table.HeaderCell>
-                                  <Table.HeaderCell textAlign='center' width={2}>Ações</Table.HeaderCell>
+                                  <Table.HeaderCell textAlign='center' width={2} >Ações</Table.HeaderCell>
                               </Table.Row>
                           </Table.Header>
                      
